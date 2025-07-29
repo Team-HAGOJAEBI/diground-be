@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma"
@@ -12,4 +6,321 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model comments {
+  id          Int?
+  user_id     Int?
+  playlist_id Int?
+  content     String?
+  created_at  DateTime?  @db.Timestamp(6)
+  created_id  String?    @db.VarChar(100)
+  created_ip  String?    @db.VarChar(20)
+  updated_at  DateTime?  @db.Timestamp(6)
+  updated_id  String?    @db.VarChar(100)
+  updated_ip  String?    @db.VarChar(20)
+  playlists   playlists? @relation(fields: [playlist_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users       users?     @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model comments_history {
+  history_type String?   @db.VarChar(10)
+  history_at   DateTime? @db.Timestamp(6)
+  history_id   String?   @db.VarChar(100)
+  history_ip   String?   @db.VarChar(20)
+  id           Int?
+  user_id      Int?
+  playlist_id  Int?
+  content      String?
+  created_at   DateTime? @db.Timestamp(6)
+  created_id   String?   @db.VarChar(100)
+  created_ip   String?   @db.VarChar(20)
+  updated_at   DateTime? @db.Timestamp(6)
+  updated_id   String?   @db.VarChar(100)
+  updated_ip   String?   @db.VarChar(20)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model inquiries {
+  id         Int?
+  user_id    Int?
+  title      String?   @db.VarChar(100)
+  message    String?
+  status     String?   @db.VarChar(20)
+  created_at DateTime? @db.Timestamp(6)
+  created_id String?   @db.VarChar(100)
+  created_ip String?   @db.VarChar(20)
+  updated_at DateTime? @db.Timestamp(6)
+  updated_id String?   @db.VarChar(100)
+  updated_ip String?   @db.VarChar(20)
+  users      users?    @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model inquiries_history {
+  history_type String?   @db.VarChar(10)
+  history_at   DateTime? @db.Timestamp(6)
+  history_id   String?   @db.VarChar(100)
+  history_ip   String?   @db.VarChar(20)
+  id           Int?
+  user_id      Int?
+  title        String?   @db.VarChar(100)
+  message      String?
+  status       String?   @db.VarChar(20)
+  created_at   DateTime? @db.Timestamp(6)
+  created_id   String?   @db.VarChar(100)
+  created_ip   String?   @db.VarChar(20)
+  updated_at   DateTime? @db.Timestamp(6)
+  updated_id   String?   @db.VarChar(100)
+  updated_ip   String?   @db.VarChar(20)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model likes {
+  id          Int?
+  user_id     Int?
+  playlist_id Int?
+  created_at  DateTime?  @db.Timestamp(6)
+  created_id  String?    @db.VarChar(100)
+  created_ip  String?    @db.VarChar(20)
+  updated_at  DateTime?  @db.Timestamp(6)
+  updated_id  String?    @db.VarChar(100)
+  updated_ip  String?    @db.VarChar(20)
+  playlists   playlists? @relation(fields: [playlist_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users       users?     @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model likes_history {
+  history_type String?   @db.VarChar(10)
+  history_at   DateTime? @db.Timestamp(6)
+  history_id   String?   @db.VarChar(100)
+  history_ip   String?   @db.VarChar(20)
+  id           Int?
+  user_id      Int?
+  playlist_id  Int?
+  created_at   DateTime? @db.Timestamp(6)
+  created_id   String?   @db.VarChar(100)
+  created_ip   String?   @db.VarChar(20)
+  updated_at   DateTime? @db.Timestamp(6)
+  updated_id   String?   @db.VarChar(100)
+  updated_ip   String?   @db.VarChar(20)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model playlist_items {
+  id          Int?
+  playlist_id Int?
+  track_url   String?
+  track_title String?    @db.VarChar(255)
+  artist      String?    @db.VarChar(255)
+  order       Int?
+  created_at  DateTime?  @db.Timestamp(6)
+  created_id  String?    @db.VarChar(100)
+  created_ip  String?    @db.VarChar(20)
+  updated_at  DateTime?  @db.Timestamp(6)
+  updated_id  String?    @db.VarChar(100)
+  updated_ip  String?    @db.VarChar(20)
+  playlists   playlists? @relation(fields: [playlist_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model playlist_items_history {
+  history_type String?   @db.VarChar(10)
+  history_at   DateTime? @db.Timestamp(6)
+  history_id   String?   @db.VarChar(100)
+  history_ip   String?   @db.VarChar(20)
+  id           Int?
+  playlist_id  Int?
+  track_url    String?
+  track_title  String?   @db.VarChar(255)
+  artist       String?   @db.VarChar(255)
+  order        Int?
+  created_at   DateTime? @db.Timestamp(6)
+  created_id   String?   @db.VarChar(100)
+  created_ip   String?   @db.VarChar(20)
+  updated_at   DateTime? @db.Timestamp(6)
+  updated_id   String?   @db.VarChar(100)
+  updated_ip   String?   @db.VarChar(20)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model playlist_tags {
+  id          Int?
+  playlist_id Int?
+  tag_id      Int?
+  created_at  DateTime?  @db.Timestamp(6)
+  created_id  String?    @db.VarChar(100)
+  created_ip  String?    @db.VarChar(20)
+  updated_at  DateTime?  @db.Timestamp(6)
+  updated_id  String?    @db.VarChar(100)
+  updated_ip  String?    @db.VarChar(20)
+  playlists   playlists? @relation(fields: [playlist_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  tags        tags?      @relation(fields: [tag_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@ignore
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model playlists {
+  id             Int              @id @default(autoincrement())
+  user_id        Int
+  title          String           @db.VarChar(100)
+  description    String?
+  is_public      Boolean?         @default(true)
+  created_at     DateTime?        @default(now()) @db.Timestamp(6)
+  created_id     String           @db.VarChar(100)
+  created_ip     String           @db.VarChar(20)
+  updated_at     DateTime?        @default(now()) @db.Timestamp(6)
+  updated_id     String           @db.VarChar(100)
+  updated_ip     String           @db.VarChar(20)
+  comments       comments[]       @ignore
+  likes          likes[]          @ignore
+  playlist_items playlist_items[] @ignore
+  playlist_tags  playlist_tags[]  @ignore
+  users          users            @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_playlists_user")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model playlists_history {
+  history_type String    @db.VarChar(10)
+  history_at   DateTime? @default(now()) @db.Timestamp(6)
+  history_id   String    @db.VarChar(100)
+  history_ip   String    @db.VarChar(20)
+  id           Int
+  user_id      Int?
+  title        String    @db.VarChar(100)
+  description  String?
+  is_public    Boolean?  @default(true)
+  created_at   DateTime? @db.Timestamp(6)
+  created_id   String    @db.VarChar(100)
+  created_ip   String    @db.VarChar(20)
+  updated_at   DateTime? @db.Timestamp(6)
+  updated_id   String    @db.VarChar(100)
+  updated_ip   String    @db.VarChar(20)
+
+  @@ignore
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model tags {
+  id            Int             @id
+  name          String?         @db.VarChar(50)
+  created_at    DateTime?       @db.Timestamp(6)
+  created_id    String?         @db.VarChar(100)
+  created_ip    String?         @db.VarChar(20)
+  updated_at    DateTime?       @db.Timestamp(6)
+  updated_id    String?         @db.VarChar(100)
+  updated_ip    String?         @db.VarChar(20)
+  playlist_tags playlist_tags[] @ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model tags_history {
+  history_type String?   @db.VarChar(10)
+  history_at   DateTime? @db.Timestamp(6)
+  history_id   String?   @db.VarChar(100)
+  history_ip   String?   @db.VarChar(20)
+  id           Int?
+  name         String?   @db.VarChar(50)
+  created_at   DateTime? @db.Timestamp(6)
+  created_id   String?   @db.VarChar(100)
+  created_ip   String?   @db.VarChar(20)
+  updated_at   DateTime? @db.Timestamp(6)
+  updated_id   String?   @db.VarChar(100)
+  updated_ip   String?   @db.VarChar(20)
+
+  @@ignore
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model users {
+  id               Int         @id @default(autoincrement())
+  provider         String      @db.VarChar(20)
+  provider_id      String      @db.VarChar(100)
+  profile_imageurl String?
+  nickname         String?     @db.VarChar(50)
+  email            String?     @unique @db.VarChar(255)
+  password         String?
+  youtube_token    String?     @db.VarChar(500)
+  youtube_id       String?     @db.VarChar(100)
+  applemusic_token String?     @db.VarChar(500)
+  applemusic_id    String?     @db.VarChar(100)
+  spotify_token    String?     @db.VarChar(500)
+  spotify_id       String?     @db.VarChar(100)
+  melon_token      String?     @db.VarChar(500)
+  melon_id         String?     @db.VarChar(100)
+  created_at       DateTime?   @default(now()) @db.Timestamp(6)
+  created_id       String      @db.VarChar(100)
+  created_ip       String      @db.VarChar(20)
+  updated_at       DateTime?   @default(now()) @db.Timestamp(6)
+  updated_id       String      @db.VarChar(100)
+  updated_ip       String      @db.VarChar(20)
+  comments         comments[]  @ignore
+  inquiries        inquiries[] @ignore
+  likes            likes[]     @ignore
+  playlists        playlists[]
+
+  @@unique([provider, provider_id])
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model users_history {
+  history_type     String    @db.VarChar(10)
+  history_at       DateTime? @default(now()) @db.Timestamp(6)
+  history_id       String    @db.VarChar(100)
+  history_ip       String    @db.VarChar(20)
+  id               Int
+  provider         String    @db.VarChar(20)
+  provider_id      String    @db.VarChar(100)
+  profile_imageurl String?
+  nickname         String?   @db.VarChar(50)
+  youtube_token    String?   @db.VarChar(500)
+  youtube_id       String?   @db.VarChar(100)
+  applemusic_token String?   @db.VarChar(500)
+  applemusic_id    String?   @db.VarChar(100)
+  spotify_token    String?   @db.VarChar(500)
+  spotify_id       String?   @db.VarChar(100)
+  melon_token      String?   @db.VarChar(500)
+  melon_id         String?   @db.VarChar(100)
+  email            String?   @unique @db.VarChar(255)
+  password         String?
+  created_at       DateTime? @db.Timestamp(6)
+  created_id       String    @db.VarChar(100)
+  created_ip       String    @db.VarChar(20)
+  updated_at       DateTime? @db.Timestamp(6)
+  updated_id       String    @db.VarChar(100)
+  updated_ip       String    @db.VarChar(20)
+
+  @@ignore
 }
