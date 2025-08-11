@@ -1,7 +1,6 @@
-import { PassportStrategy } from '@nestjs/passport';
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import { Injectable } from '@nestjs/common';
-
+import { Injectable } from "@nestjs/common";
+import { PassportStrategy } from "@nestjs/passport";
+import { ExtractJwt, Strategy } from "passport-jwt";
 
 type JwtPayload = {
   sub: string;
@@ -9,17 +8,15 @@ type JwtPayload = {
   name?: string;
   picture?: string;
   iat?: number;
-}
+};
 
 @Injectable()
-export class AccessTokenStrategy extends PassportStrategy(
-  Strategy,
-  'jwt-access-token',
-) {
+export class AccessTokenStrategy extends PassportStrategy(Strategy, "jwt-access-token") {
   constructor() {
     const secret = process.env.AUTH_SECRET;
+
     if (!secret) {
-      throw new Error('AUTH_SECRET 환경변수가 필요함');
+      throw new Error("AUTH_SECRET 환경변수가 필요함");
     }
 
     super({

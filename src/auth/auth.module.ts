@@ -1,11 +1,11 @@
-import { Module } from '@nestjs/common';
-import { PassportModule } from '@nestjs/passport';
-import {JwtModule } from '@nestjs/jwt';
-import { AccessTokenStrategy } from './strategies/access-token.stategy';
+import { Module } from "@nestjs/common";
+import { JwtModule } from "@nestjs/jwt";
+import { PassportModule } from "@nestjs/passport";
+
+import { AccessTokenStrategy } from "./strategies/access-token.stategy";
 
 @Module({
   imports: [PassportModule, JwtModule.register({})],
   providers: [AccessTokenStrategy],
 })
-
 export class AuthModule {}
