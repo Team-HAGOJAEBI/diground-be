@@ -15,13 +15,12 @@ const compat = new FlatCompat({
 });
 
 const config = [
-  ...compat.extends("next", "next/core-web-vitals"),
   ...compat.extends("prettier"),
   ...compat.extends("plugin:@typescript-eslint/recommended"),
   {
     plugins: {
       prettier,
-      importPlugin,
+      import: importPlugin,
     },
     rules: {
       "import/prefer-default-export": "off", // 기본 내보내기 사용 금지
