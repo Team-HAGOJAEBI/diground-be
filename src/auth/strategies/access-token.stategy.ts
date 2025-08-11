@@ -5,7 +5,10 @@ import { Injectable } from '@nestjs/common';
 
 type JwtPayload = {
   sub: string;
-  username: string;
+  email?: string;
+  name?: string;
+  picture?: string;
+  iat?: number;
 }
 
 @Injectable()
