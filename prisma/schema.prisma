@@ -112,10 +112,10 @@ model Playlists {
   playlistTitle       String           @db.VarChar(100)  @map("playlist_title")
   playlistUrl         String @map("playlist_url")
   playlistDescription String?  @map("playlist_description")
-  isPublic            Boolean?         @default(true)  @map("is_public")
-  createdAt           DateTime?        @default(now()) @db.Timestamp(6)  @map("created_at")
+  isPublic            Boolean         @default(true)  @map("is_public")
+  createdAt           DateTime        @default(now()) @db.Timestamp(6)  @map("created_at")
   createdIp           String           @db.VarChar(20) @map("created_ip")
-  updatedAt           DateTime?        @default(now()) @db.Timestamp(6)  @map("updated_at")
+  updatedAt           DateTime        @updatedAt @db.Timestamp(6)  @map("updated_at")
   updatedId           String           @db.VarChar(100)  @map("updated_id")
   comments             Comments[]
   diggings             Diggings[]
