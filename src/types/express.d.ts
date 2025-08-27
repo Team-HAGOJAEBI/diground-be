@@ -1,5 +1,3 @@
-import {Express} from 'express';
-
 type JwtPayload = {
   sub: string;
   email?: string;
@@ -8,8 +6,9 @@ type JwtPayload = {
   iat?: number;
 };
 
-declare global{
-  namespace Express{
-    interface User extends JwtPayload{}
+declare global {
+  namespace Express {
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+    interface User extends JwtPayload {}
   }
 }
