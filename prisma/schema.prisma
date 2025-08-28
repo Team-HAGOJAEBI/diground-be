@@ -116,7 +116,7 @@ model Playlists {
   createdAt           DateTime        @default(now()) @db.Timestamp(6)  @map("created_at")
   createdIp           String           @db.VarChar(20) @map("created_ip")
   updatedAt           DateTime        @updatedAt @db.Timestamp(6)  @map("updated_at")
-  updatedId           String           @db.VarChar(100)  @map("updated_id")
+  updatedIp           String           @db.VarChar(20)   @map("updated_ip")
   comments             Comments[]
   diggings             Diggings[]
   likes                Likes[]
