@@ -18,6 +18,6 @@ export class AppController {
   @UseGuards(AccessTokenGuard)
   @ApiBearerAuth("access-token")
   testUser(@Req() req: Request) {
-    return `유저 이메일 ${req.user?.email}`;
+    return `유저 정보: ${JSON.stringify(req.user)}`;
   }
 }

@@ -1,8 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
-import { Playlists } from "@prisma/client";
+import { Playlists, Prisma } from "@prisma/client";
 import { CreatePlaylistDto } from "./dto/create-playlist.dto";
-import { Prisma } from "@prisma/client";
 
 @Injectable()
 export class PlaylistsService {
