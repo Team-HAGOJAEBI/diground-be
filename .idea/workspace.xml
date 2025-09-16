@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2325c7cd-b7c6-4b1b-be4e-87b7c8cf5b0c" name="변경" comment="feat: playlist service에 create, findall, findone 추가">
+      <change afterPath="$PROJECT_DIR$/prisma/migrations/20250828152548_init/migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playlists/playlists.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/playlists/playlists.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playlists/playlists.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/playlists/playlists.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;chb6734&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Team-HAGOJAEBI/diground-be&quot;,
+    &quot;accountId&quot;: &quot;20b4e770-b1c3-4ce0-834a-51656c9c1f3f&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="310IrVktXl8EKtQe2g5J6YuyjmT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chahyunbin/Documents/hagojaebi/diground/diground-be&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/chahyunbin/Documents/hagojaebi/diground/diground-be/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/chahyunbin/Documents/hagojaebi/diground/diground-be/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prisma" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.27812.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="2325c7cd-b7c6-4b1b-be4e-87b7c8cf5b0c" name="변경" comment="" />
+      <created>1754654761741</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754654761741</updated>
+      <workItem from="1754654762847" duration="7894000" />
+      <workItem from="1754731432122" duration="13739000" />
+      <workItem from="1755816690118" duration="11687000" />
+      <workItem from="1756309824238" duration="39374000" />
+      <workItem from="1756725036862" duration="15000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: DB 모델 수정">
+      <option name="closed" value="true" />
+      <created>1754721177285</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754721177286</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Auth Guard 구현">
+      <option name="closed" value="true" />
+      <created>1754848597195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754848597195</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Swagger 세팅">
+      <option name="closed" value="true" />
+      <created>1754929350289</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754929350289</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: 암호화 된 토큰에서 정보 가져오는 기능 테스트">
+      <option name="closed" value="true" />
+      <created>1754929411812</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1754929411812</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: prettier, eslint 설정">
+      <option name="closed" value="true" />
+      <created>1754929568515</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754929568515</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: prettier, eslint 설정 nest에 맞게 수정">
+      <option name="closed" value="true" />
+      <created>1754929897656</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1754929897656</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: prettier, eslint 코드 적용">
+      <option name="closed" value="true" />
+      <created>1754929935439</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754929935439</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor: prisma 모델 네이밍컨벤션 변경">
+      <option name="closed" value="true" />
+      <created>1756317125702</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756317125702</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: prisma studio 명령어 추가">
+      <option name="closed" value="true" />
+      <created>1756317317374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756317317374</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: uuid 라이브러리 설치">
+      <option name="closed" value="true" />
+      <created>1756317428949</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756317428949</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: 토큰 인증 테스트">
+      <option name="closed" value="true" />
+      <created>1756317666539</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756317666539</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: seed 데이터 추가 명령어 추가">
+      <option name="closed" value="true" />
+      <created>1756319336509</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1756319336509</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: seed 데이터 생성 스크립트 추가">
+      <option name="closed" value="true" />
+      <created>1756319375350</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756319375350</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor: 린트 적용">
+      <option name="closed" value="true" />
+      <created>1756319904453</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1756319904453</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: Prisma 모듈, 서비스 구현">
+      <option name="closed" value="true" />
+      <created>1756320483907</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1756320483907</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: playlist Api 구성요소 세팅">
+      <option name="closed" value="true" />
+      <created>1756320514621</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1756320514621</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: app.module에 PrismaModule, PlaylistModule 추가">
+      <option name="closed" value="true" />
+      <created>1756320568996</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1756320568996</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore: class-validator 라이브러리 추가">
+      <option name="closed" value="true" />
+      <created>1756320958573</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1756320958573</updated>
+    </task>
+    <task id="LOCAL-00019" summary="migrate: playlists 스키마 마이그레이션">
+      <option name="closed" value="true" />
+      <created>1756321839604</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1756321839604</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: create playlists dto 추가">
+      <option name="closed" value="true" />
+      <created>1756322144966</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1756322144966</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: update playlists dto 추가">
+      <option name="closed" value="true" />
+      <created>1756322232084</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1756322232084</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: prisma schema 수정">
+      <option name="closed" value="true" />
+      <created>1756322262248</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1756322262248</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: prisma schema 수정">
+      <option name="closed" value="true" />
+      <created>1756404166596</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1756404166596</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: create-playlist.dto 수정">
+      <option name="closed" value="true" />
+      <created>1756404185826</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1756404185826</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: playlist service에 create, findall, findone 추가">
+      <option name="closed" value="true" />
+      <created>1756404233961</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1756404233961</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: DB 모델 수정" />
+    <MESSAGE value="feat: Auth Guard 구현" />
+    <MESSAGE value="feat: Swagger 세팅" />
+    <MESSAGE value="feat: 암호화 된 토큰에서 정보 가져오는 기능 테스트" />
+    <MESSAGE value="chore: prettier, eslint 설정" />
+    <MESSAGE value="chore: prettier, eslint 설정 nest에 맞게 수정" />
+    <MESSAGE value="refactor: prettier, eslint 코드 적용" />
+    <MESSAGE value="refactor: prisma 모델 네이밍컨벤션 변경" />
+    <MESSAGE value="chore: prisma studio 명령어 추가" />
+    <MESSAGE value="chore: uuid 라이브러리 설치" />
+    <MESSAGE value="feat: 토큰 인증 테스트" />
+    <MESSAGE value="chore: seed 데이터 추가 명령어 추가" />
+    <MESSAGE value="feat: seed 데이터 생성 스크립트 추가" />
+    <MESSAGE value="refactor: 린트 적용" />
+    <MESSAGE value="feat: Prisma 모듈, 서비스 구현" />
+    <MESSAGE value="feat: playlist Api 구성요소 세팅" />
+    <MESSAGE value="feat: app.module에 PrismaModule, PlaylistModule 추가" />
+    <MESSAGE value="chore: class-validator 라이브러리 추가" />
+    <MESSAGE value="migrate: playlists 스키마 마이그레이션" />
+    <MESSAGE value="feat: create playlists dto 추가" />
+    <MESSAGE value="feat: update playlists dto 추가" />
+    <MESSAGE value="feat: prisma schema 수정" />
+    <MESSAGE value="feat: create-playlist.dto 수정" />
+    <MESSAGE value="feat: playlist service에 create, findall, findone 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: playlist service에 create, findall, findone 추가" />
+  </component>
+</project>
